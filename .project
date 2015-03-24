@@ -1,5 +1,5 @@
 <projectDescription>
-  <name>hello</name>
+  <name>WordCount</name>
   <buildSpec>
     <buildCommand>
       <name>org.scala-ide.sdt.core.scalabuilder</name>

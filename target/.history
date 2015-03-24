@@ -1,2 +1,4 @@
 eclipse
 exit
+eclipse with-source=true
+assembly

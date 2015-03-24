@@ -2,7 +2,7 @@
 [0m[[0mdebug[0m] [0mWaiting for threads to exit or System.exit to be called.[0m
 [0m[[0mdebug[0m] [0m  Classpath:[0m
 [0m[[0mdebug[0m] [0m	/var/software/scala/sbtproject/sparkWordCount/target/scala-2.11/classes[0m
-[0m[[0mdebug[0m] [0m	/home/glniu/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.1.jar[0m
+[0m[[0mdebug[0m] [0m	/home/glniu/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.5.jar[0m
 [0m[[0mdebug[0m] [0mWaiting for thread run-main-0 to terminate.[0m
 [0m[[0mdebug[0m] [0m	Thread run-main-0 exited.[0m
 [0m[[0mdebug[0m] [0mInterrupting remaining threads (should be all daemons).[0m
