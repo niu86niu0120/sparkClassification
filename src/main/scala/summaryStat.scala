@@ -72,8 +72,8 @@ object summaryStat {
     val fractions: Map[Double, Double] = Map(0.0 -> 0.05, 1.0 -> 0.05) // specify the exact fraction desired from each key
 
     // Get an exact sample from each stratum
-    val approxSample = kvdata.sampleByKey(withReplacement = false, fractions)
-    val exactSample = kvdata.sampleByKeyExact(withReplacement = false, fractions)
+    val approxSample = kvdata.sampleByKey(withReplacement = false, fractions, 1L)
+    val exactSample = kvdata.sampleByKeyExact(withReplacement = false, fractions, 1L)
     println("sampley by key results " + approxSample)
     println("sampley by keyExact results " + exactSample)
 
