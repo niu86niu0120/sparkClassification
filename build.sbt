@@ -2,7 +2,7 @@ import AssemblyKeys._
 
 assemblySettings 
 
-name := "WordCount" 
+name := "Recommender" 
 
 version := "1.0"
 
@@ -15,7 +15,7 @@ libraryDependencies ++= Seq(
 "org.apache.spark" % "spark-mllib_2.10" % "1.2.0" % "provided"
 ) 
 
-mainClass in assembly := Some("WordCount") 
+mainClass in assembly := Some("Recommender") 
 
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { mergeStrategy => { 
 case entry => { 
