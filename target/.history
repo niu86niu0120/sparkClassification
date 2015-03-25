@@ -2,3 +2,9 @@ eclipse
 exit
 eclipse with-source=true
 assembly
+clean
+compile
+assembly
+clean
+compile
+assembly

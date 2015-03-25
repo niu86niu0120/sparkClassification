@@ -28,6 +28,7 @@ import org.apache.spark.mllib.stat.{ MultivariateStatisticalSummary, Statistics 
 import org.apache.spark.mllib.regression.LabeledPoint
 import org.apache.spark.rdd.PairRDDFunctions
 import org.apache.spark.mllib.random.RandomRDDs._
+import scala.collection.immutable.Map
 
 object summaryStat {
   def main(args: Array[String]) {
@@ -66,7 +67,8 @@ object summaryStat {
 
     val kvdata = data3.map { line =>
       val parts = line.split(' ')
-      (parts(0).toDouble, new DenseVector(parts.tail.map(x => x.toDouble).toArray))
+      (parts(0).toDouble, Vectors.dense(parts.tail.map(x => x.toDouble).toArray))
+      //(parts(0).toDouble, new DenseVector(parts.tail.map(x => x.toDouble).toArray))
     }
 
     val fractions: Map[Double, Double] = Map(0.0 -> 0.05, 1.0 -> 0.05) // specify the exact fraction desired from each key
