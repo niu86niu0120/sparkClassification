@@ -1,2 +1,2 @@
-# scalademo
-try different scala demos
+# recommender
+movie recommenders
