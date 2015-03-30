@@ -10,11 +10,14 @@ import org.apache.spark.SparkContext
 import org.apache.spark.SparkContext._
 import org.apache.spark.rdd._
 import org.apache.spark.mllib.recommendation.{ALS, Rating, MatrixFactorizationModel}
+import scala.collection.immutable.HashSet
 
 object MovieLensALS {
 
   def main(args: Array[String]) {
-
+    
+     val t1 = System.currentTimeMillis
+    
     Logger.getLogger("org.apache.spark").setLevel(Level.WARN)
     Logger.getLogger("org.eclipse.jetty.server").setLevel(Level.OFF)
 
@@ -33,8 +36,13 @@ object MovieLensALS {
 
     // load personal ratings
 
-    val myRatings = loadRatings(args(1))
-    val myRatingsRDD = sc.parallelize(myRatings, 1)
+    //val myRatings = loadRatings(args(1))
+   // val myRatingsRDD = sc.parallelize(myRatings, 1)
+    val myRatingsRDD = sc.textFile(args(1)).map { line =>
+      val fields = line.split("::")
+      // format: Rating(userId, movieId, rating)
+       Rating(fields(0).toInt, fields(1).toInt, fields(2).toDouble)
+    }
 
     // load ratings and movie titles
 
@@ -120,8 +128,10 @@ object MovieLensALS {
     println("The best model improves the baseline by " + "%1.2f".format(improvement) + "%.")
 
     // make personalized recommendations
-
+    
+    val myRatings = myRatingsRDD.collect().toSeq;
     val myRatedMovieIds = myRatings.map(_.product).toSet
+   
     val candidates = sc.parallelize(movies.keys.filter(!myRatedMovieIds.contains(_)).toSeq)
     val recommendations = bestModel.get
       .predict(candidates.map((0, _)))
@@ -135,7 +145,10 @@ object MovieLensALS {
       println("%2d".format(i) + ": " + movies(r.product))
       i += 1
     }
-
+    
+     val t2 = System.currentTimeMillis
+     println("running time " + (t2 - t1)/1000 + " seconds")
+     
     // clean up
     sc.stop()
   }
@@ -162,4 +175,7 @@ object MovieLensALS {
       ratings.toSeq
     }
   }
+  
+    
+  
 }

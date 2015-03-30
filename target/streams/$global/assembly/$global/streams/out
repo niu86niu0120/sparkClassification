@@ -9,7 +9,7 @@
 [0m[[33mwarn[0m] [0mMerging 'META-INF/MANIFEST.MF' with strategy 'discard'[0m
 [0m[[33mwarn[0m] [0mStrategy 'discard' was applied to 2 files[0m
 [0m[[33mwarn[0m] [0mStrategy 'rename' was applied to 2 files[0m
-[0m[[0minfo[0m] [0mSHA-1: af48b3f1df0ceaf1f8fb002c84fdf8c900ca23b2[0m
+[0m[[0minfo[0m] [0mSHA-1: 8b59e45ad86dbd3cb5454aeabd3a27a89a2cde6d[0m
 [0m[[0minfo[0m] [0mPackaging /var/software/scala/sbtproject/sparkRecommender/target/scala-2.10/Recommender-assembly-1.0.jar ...[0m
 [0m[[0mdebug[0m] [0mInput file mappings:[0m
 [0m[[0mdebug[0m] [0m	META-INF/LICENSE_log4j-api-2.1[0m
@@ -40,6 +40,8 @@
 [0m[[0mdebug[0m] [0m	  /var/software/scala/sbtproject/sparkRecommender/target/streams/$global/assemblyOption/$global/streams/assembly/d039a880dc257675c8aba4b8d430d23459fa246d_dir/MovieLensALS$$anonfun$17.class[0m
 [0m[[0mdebug[0m] [0m	MovieLensALS$$anonfun$18.class[0m
 [0m[[0mdebug[0m] [0m	  /var/software/scala/sbtproject/sparkRecommender/target/streams/$global/assemblyOption/$global/streams/assembly/d039a880dc257675c8aba4b8d430d23459fa246d_dir/MovieLensALS$$anonfun$18.class[0m
+[0m[[0mdebug[0m] [0m	MovieLensALS$$anonfun$19.class[0m
+[0m[[0mdebug[0m] [0m	  /var/software/scala/sbtproject/sparkRecommender/target/streams/$global/assemblyOption/$global/streams/assembly/d039a880dc257675c8aba4b8d430d23459fa246d_dir/MovieLensALS$$anonfun$19.class[0m
 [0m[[0mdebug[0m] [0m	MovieLensALS$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	  /var/software/scala/sbtproject/sparkRecommender/target/streams/$global/assemblyOption/$global/streams/assembly/d039a880dc257675c8aba4b8d430d23459fa246d_dir/MovieLensALS$$anonfun$2.class[0m
 [0m[[0mdebug[0m] [0m	MovieLensALS$$anonfun$3.class[0m
