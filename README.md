@@ -1,2 +1,2 @@
-# recommender
-movie recommenders
+# classification
+all kinds of classification algorithms
