@@ -2,7 +2,7 @@ import AssemblyKeys._
 
 assemblySettings 
 
-name := "Classification" 
+name := "Recommender" 
 
 version := "1.0"
 
@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
 "org.apache.logging.log4j" % "log4j-api" % "2.1"
 ) 
 
-mainClass in assembly := Some("Classification") 
+mainClass in assembly := Some("Recommender") 
 
 mergeStrategy in assembly <<= (mergeStrategy in assembly) { mergeStrategy => { 
 case entry => { 
