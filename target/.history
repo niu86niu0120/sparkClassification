@@ -1,35 +1,6 @@
-eclipse
-exit
+eclipse with-source = true
 eclipse with-source=true
-assembly
-clean
-compile
-assembly
-clean
-compile
-assembly
-clean
-compile
-assembly
-clean
-compile
-assembly
-clean
-compile
-clean
-compile
-assembly
-clean
-compile
-clean
-compile
-clean
-compile
-clean
-compile
-clean
-compile
-assembly
+sbt
 clean
 compile
 assembly
